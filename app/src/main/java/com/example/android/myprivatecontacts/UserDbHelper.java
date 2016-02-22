@@ -102,6 +102,20 @@ public class UserDbHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
+    public void deleteInformation(String user_name, SQLiteDatabase sqLiteDatabase){
+
+        String selection = UserContact.NewUserInfo.USER_NAME + " LIKE ?";
+
+        String[] selection_args = {user_name};
+
+        sqLiteDatabase.delete(UserContact.NewUserInfo.TABLE_NAME, selection, selection_args);
+
+
+
+
+
+    }
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 

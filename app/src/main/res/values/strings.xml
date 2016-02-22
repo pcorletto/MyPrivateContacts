@@ -23,5 +23,6 @@
     <string name="enter_name_prompt">Enter name</string>
     <string name="email_here_prompt">Email Here</string>
     <string name="mobile_here_prompt">Mobile Here</string>
+    <string name="delete_button_prompt">Delete Contact</string>
 
 </resources>
