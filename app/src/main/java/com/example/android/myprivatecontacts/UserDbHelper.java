@@ -79,6 +79,29 @@ public class UserDbHelper extends SQLiteOpenHelper {
     }
 
 
+    // The next method is to retrieve a particular row from the database, for the SEARCH function
+
+    public Cursor getContact(String user_name, SQLiteDatabase sqLiteDatabase){
+
+        // Get the projections, so that we can get the mobile number and e-mail corresponding
+        // to a name.
+
+        String[] projections = {UserContact.NewUserInfo.USER_MOB, UserContact.NewUserInfo.USER_EMAIL};
+
+        // Now, define the condition, the "WHERE" clause
+
+        String selection = UserContact.NewUserInfo.USER_NAME + " LIKE ?";
+
+        String[] selection_args = {user_name};
+
+        // In the next statement, the parameters are: first, the table name; second, the projections;
+        //third, the selection arguments; and the last three, make them null.
+
+        Cursor cursor = sqLiteDatabase.query(UserContact.NewUserInfo.TABLE_NAME, projections, selection,
+                selection_args, null, null, null);
+        return cursor;
+    }
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 

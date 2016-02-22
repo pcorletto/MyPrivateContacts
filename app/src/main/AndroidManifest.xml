@@ -28,6 +28,14 @@
             android:name=".DataListActivity"
             android:label="@string/title_activity_data_list" >
         </activity>
+        <activity
+            android:name=".SearchContactActivity"
+            android:label="@string/title_activity_search_contact"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.myprivatecontacts.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

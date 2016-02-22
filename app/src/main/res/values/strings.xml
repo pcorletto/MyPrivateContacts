@@ -18,5 +18,10 @@
     <string name="contact_email_title">Email Address</string>
     <string name="save_contact_button_title">SAVE</string>
     <string name="title_activity_data_list">DataListActivity</string>
+    <string name="title_activity_search_contact">SearchContactActivity</string>
+    <string name="search_button_prompt">SEARCH</string>
+    <string name="enter_name_prompt">Enter name</string>
+    <string name="email_here_prompt">Email Here</string>
+    <string name="mobile_here_prompt">Mobile Here</string>
 
 </resources>

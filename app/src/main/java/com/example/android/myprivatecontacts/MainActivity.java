@@ -9,7 +9,8 @@ import android.widget.Button;
 
 public class MainActivity extends ActionBarActivity {
 
-    private Button addContactButton;
+    private Button addContactButton, viewContactButton, searchContactButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +18,8 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         addContactButton = (Button) findViewById(R.id.add_contact_button);
+        viewContactButton = (Button) findViewById(R.id.view_contact_button);
+        searchContactButton = (Button) findViewById(R.id.search_contact_button);
 
         addContactButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,13 +29,23 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
+        viewContactButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, DataListActivity.class);
+                startActivity(intent);
+                            }
+        });
 
-    }
+        searchContactButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SearchContactActivity.class);
+                startActivity(intent);
+            }
+        });
 
-    public void viewContact(View view){
 
-        Intent intent = new Intent(this, DataListActivity.class);
-        startActivity(intent);
     }
 
 
