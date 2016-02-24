@@ -36,6 +36,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.android.myprivatecontacts.MainActivity" />
         </activity>
+        <activity
+            android:name=".UpdateContactActivity"
+            android:label="@string/title_activity_update_contact"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.myprivatecontacts.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

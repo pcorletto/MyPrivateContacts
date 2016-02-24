@@ -25,8 +25,8 @@ public class SearchContactActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_contact);
-        display_email = (TextView) findViewById(R.id.display_email);
-        display_mobile = (TextView) findViewById(R.id.display_mobile);
+        display_email = (TextView) findViewById(R.id.name_edit_text);
+        display_mobile = (TextView) findViewById(R.id.email_edit_text);
         search_name_editText = (EditText) findViewById(R.id.search_name);
         display_email.setVisibility(View.INVISIBLE);
         display_mobile.setVisibility(View.INVISIBLE);

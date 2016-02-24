@@ -21,8 +21,11 @@
     <string name="title_activity_search_contact">SearchContactActivity</string>
     <string name="search_button_prompt">SEARCH</string>
     <string name="enter_name_prompt">Enter name</string>
+    <string name="name_here_prompt">Name Here</string>
     <string name="email_here_prompt">Email Here</string>
     <string name="mobile_here_prompt">Mobile Here</string>
     <string name="delete_button_prompt">Delete Contact</string>
+    <string name="update_button_prompt">Update Contact</string>
+    <string name="title_activity_update_contact">UpdateContactActivity</string>
 
 </resources>

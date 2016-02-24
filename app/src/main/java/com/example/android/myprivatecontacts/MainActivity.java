@@ -9,7 +9,8 @@ import android.widget.Button;
 
 public class MainActivity extends ActionBarActivity {
 
-    private Button addContactButton, viewContactButton, searchContactButton, deleteContactButton;
+    private Button addContactButton, viewContactButton, searchContactButton, deleteContactButton,
+                   updateContactButton;
 
 
     @Override
@@ -21,6 +22,8 @@ public class MainActivity extends ActionBarActivity {
         viewContactButton = (Button) findViewById(R.id.view_contact_button);
         searchContactButton = (Button) findViewById(R.id.search_contact_button);
         deleteContactButton = (Button) findViewById(R.id.delete_contact_button);
+        updateContactButton = (Button) findViewById(R.id.update_contact_button);
+
 
         addContactButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +53,14 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SearchContactActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        updateContactButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, UpdateContactActivity.class);
                 startActivity(intent);
             }
         });

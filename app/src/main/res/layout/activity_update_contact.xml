@@ -6,7 +6,7 @@
                 android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingTop="@dimen/activity_vertical_margin"
                 android:paddingBottom="@dimen/activity_vertical_margin"
-                tools:context="com.example.android.myprivatecontacts.SearchContactActivity"
+                tools:context="com.example.android.myprivatecontacts.UpdateContactActivity"
                 android:background="#A74D4D">
 
 
@@ -31,35 +31,56 @@
         android:layout_alignRight="@+id/name_edit_text"
         android:layout_alignEnd="@+id/name_edit_text"/>
 
-    <TextView
+    <EditText
         android:layout_marginTop="100dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/email_here_prompt"
+        android:text="@string/name_here_prompt"
         android:id="@+id/name_edit_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:layout_below="@+id/search_name"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
 
-    <TextView
-        android:layout_marginTop="50dp"
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/mobile_here_prompt"
-        android:id="@+id/email_edit_text"
+        android:id="@+id/mob_edit_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:layout_below="@+id/name_edit_text"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+        android:layout_alignRight="@+id/search_name_btn"
+        android:layout_alignEnd="@+id/search_name_btn"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/email_here_prompt"
+        android:id="@+id/email_edit_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_below="@+id/mob_edit_text"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/delete_button_prompt"
-        android:id="@+id/delete_name_btn"
-        android:onClick="deleteContact"
-        android:layout_below="@+id/email_edit_text"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="56dp"/>
+        android:text="@string/update_button_prompt"
+        android:id="@+id/update_contact_btn"
+        android:onClick="updateContact"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Contact"
+        android:id="@+id/title_text"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/search_name"
+        android:layout_alignRight="@+id/search_name_btn"
+        android:layout_alignEnd="@+id/search_name_btn"
+        android:layout_marginTop="43dp"/>
+
 </RelativeLayout>
